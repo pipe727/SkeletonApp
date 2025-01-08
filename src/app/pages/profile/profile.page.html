@@ -27,14 +27,13 @@
       <ion-select-option value="snes">SNES</ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-datetime-button datetime="datetime">
-    <ion-icon slot="icon-only" name="calendar"></ion-icon>
-  </ion-datetime-button>
-  <ion-modal [keepContentsMounted]="true">
-    <ng-template>
-      <ion-datetime id="datetime"></ion-datetime>
-    </ng-template>
-  </ion-modal>
+  <ion-item>
+    <ion-label position="stacked">Fecha de nacimiento</ion-label>
+    <ion-input readonly></ion-input>
+    <ion-button fill="clear" size="large" slot="end">
+      <ion-icon slot="icon-only" name="calendar"></ion-icon>
+    </ion-button>
+  </ion-item>
   <ion-button class="separador-limpiar">
     Limpiar
   </ion-button>
