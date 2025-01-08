@@ -9,6 +9,38 @@
   <ion-item>
     <ion-textarea [readonly]="true" label="Usuario: " placeholder="Nombre"></ion-textarea>
   </ion-item>
+  <h1 class="ion-text-center">Informacion adicional</h1>
+  <ion-item>
+    <ion-input label="Nombre" placeholder="Ingrese Nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Apellido" placeholder="Ingrese Apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-select label="Nivel Educación" placeholder="Seleccione Nivel">
+      <ion-select-option value="">No Game Console</ion-select-option>
+      <ion-select-option value="nes">NES</ion-select-option>
+      <ion-select-option value="n64">Nintendo64</ion-select-option>
+      <ion-select-option value="ps">PlayStation</ion-select-option>
+      <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+      <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+      <ion-select-option value="snes">SNES</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-datetime-button datetime="datetime">
+    <ion-icon slot="icon-only" name="calendar"></ion-icon>
+  </ion-datetime-button>
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+  <ion-button class="separador-limpiar">
+    Limpiar
+  </ion-button>
+  <ion-button class="separador-mostrar">
+    Mostrar
+  </ion-button>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
