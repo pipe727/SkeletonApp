@@ -30,16 +30,27 @@
   <ion-item>
     <ion-label position="stacked">Fecha de nacimiento</ion-label>
     <ion-input readonly></ion-input>
-    <ion-button fill="clear" size="large" slot="end">
+    <ion-button id="click-trigger" fill="clear" size="large" slot="end">
       <ion-icon slot="icon-only" name="calendar"></ion-icon>
     </ion-button>
+    <ion-popover trigger="click-trigger" triggerAction="click">
+      <ng-template>
+        <ion-datetime></ion-datetime>
+      </ng-template>
+    </ion-popover>
   </ion-item>
   <ion-button class="separador-limpiar">
     Limpiar
   </ion-button>
-  <ion-button class="separador-mostrar">
+  <ion-button class="separador-mostrar" id="present-alert">
     Mostrar
   </ion-button>
+  <ion-alert
+    trigger="present-alert"
+    header="Usuario"
+    message="Su nombre es nombre apellido"
+    buttons="Yes"
+  ></ion-alert>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
